@@ -17,6 +17,17 @@ class Student{
     } 
 
     public function transferToNextCourse(){
-        $this->course++;
+        $checkingCourse = $this->course + 1;
+        if($this->courseCheck($checkingCourse)){
+            $this->course = $checkingCourse;
+        }
+    }
+
+    private function courseCheck($course){
+        if($course < 6){
+            return true;
+        } else {
+            return false;
+        }
     }
 }
