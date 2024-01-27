@@ -4,29 +4,24 @@ class Arr
     // Массив для хранения чисел:
     private $numbers;
 
-    public function __construct($numbers)
-    {
-        $this->numbers = $numbers; // записываем массив $numbers в свойство
-    }
-
     // Добавляет число в набор:
     public function add($arr)
+    {
+        $this->numbers[] = $arr;
+        return $this;
+    }
+
+    public function push($arr)
     {
         for ($i = 0; $i < count($arr); $i++) {
             $this->numbers[] = $arr[$i];
         }
+        return $this;
     }
 
     // Находит сумму чисел набора:
     public function getSum()
     {
         return array_sum($this->numbers);
-    }
-
-    public function getAvg()
-    {
-        $arrLength = count($this->numbers);
-        $arrSumm = array_sum($this->numbers);
-        return $arrSumm / $arrLength;
     }
 }
