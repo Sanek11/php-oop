@@ -4,6 +4,11 @@ class Arr
     // Массив для хранения чисел:
     private $numbers;
 
+    public function __construct($numbers)
+    {
+        $this->numbers = $numbers; // записываем массив $numbers в свойство
+    }
+
     // Добавляет число в набор:
     public function add($arr)
     {
@@ -25,4 +30,3 @@ class Arr
         return $arrSumm / $arrLength;
     }
 }
-

@@ -2,18 +2,18 @@
 require_once 'User.php';
 require_once 'Employee.php';
 require_once 'Student.php';
-require_once 'Array.php';
+require_once 'Arr.php';
 require_once 'City.php';
 
-$jey = new Student('Jey');
-echo $jey->getName() . ' ';
-echo $jey->transferToNextCourse();
-echo $jey-> getCourse();
+// $jey = new Student('Jey');
+// echo $jey->getName() . ' ';
+// echo $jey->transferToNextCourse();
+// echo $jey-> getCourse();
 
-//work with Array class
-$arr = new Arr;
-$arr->add([1, 2, 3]);
-echo $arr->getAvg();
+//work with Arr class
+// $arr = new Arr;
+// $arr->add([1, 2, 3]);
+// echo $arr->getAvg();
 
 
 //обращение к методам через имена в ассоциативном массиве
@@ -21,7 +21,10 @@ echo $arr->getAvg();
 // echo $city->{$methods['method1']}();
 
 //array in class with method getSumm
-$city = new City([1920, 100000]);
-$city->addArr(25);
-echo $city->getSumm();
+// $city = new City([1920, 100000]);
+// $city->addArr(25);
+// echo $city->getSumm();
+
+//Вызов метода сразу после создания объекта
+echo (new Arr([1, 2, 3, 4]))->getSum();
 ?>
