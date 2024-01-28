@@ -1,7 +1,8 @@
 <?php
-require_once 'Arr.php';
+require_once 'AvgHelper.php';
 
 //вызов методов цепочкой
-$arr = new Arr;
-echo $arr->add(2)->push([3, 1])->getSum();
+$s = new ArraySumHelper;
+$arr = [2, 3, 4];
+echo $s->getSum2($arr);
 ?>
