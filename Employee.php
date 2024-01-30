@@ -1,14 +1,15 @@
 <?php
-class Employee {
-    private $name;
-    
-    public function __construct($name){
-        $this->name = $name;
+class Employee extends User
+{
+    private $salary;
+
+    public function setSalary($salary)
+    {
+        $this->salary = $salary;
     }
 
-    public function getName(){
-        return $this->name;
+    public function getSalary()
+    {
+        return $this->salary;
     }
 }
-
-$arr = ['a', 'c', 'z'];

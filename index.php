@@ -1,8 +1,10 @@
 <?php
-require_once 'AvgHelper.php';
+require_once 'User.php';
+require_once 'Employee.php';
 
 //Класс как набор методов
-$s = new ArraySumHelper;
-$arr = [2, 3, 4];
-echo $s->getSum2($arr);
-?>
+$user = new Employee('Joe', 25);
+$user->setSalary(3200);
+echo $user->getAge();
+echo $user->getName();
+echo $user->getSalary();
